@@ -8,21 +8,26 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>分析結果：あなたへの推薦企業</h1>
-        </div>
+        <header class="header">
+            <h1>分析完了：あなたへの推薦企業</h1>
+        </header>
 
-        <div class="profile-summary">
-            <h2>あなたの重視する価値観</h2>
-            <ul id="profile-summary-list">
-                <!-- JavaScriptによって動的に挿入されます -->
-            </ul>
-        </div>
+        <section class="persona-section">
+            <h2>AIによるあなたのペルソナ分析 [by Gemini]</h2>
+            <div id="persona-summary">
+                <!-- `results.js`によって挿入 -->
+            </div>
+            <div class="value-tags">
+                <strong>あなたのコアバリュー:</strong>
+                <div id="core-values-tags">
+                    <!-- `results.js`によって挿入 -->
+                </div>
+            </div>
+        </section>
 
-        <div id="recommendation-results">
-            <!-- JavaScriptによって推薦企業カードが動的に挿入されます -->
-        </div>
-
+        <section id="recommendation-results">
+            <!-- `results.js`によって推薦企業カードが挿入 -->
+        </section>
     </div>
     <script src="results.js"></script>
 </body>
