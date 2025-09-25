@@ -8,64 +8,50 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header class="header">
             <h1>AIキャリアマッチング</h1>
-            <p>詳細なプロフィールを入力することで、AIがあなたの価値観に合う企業を深く分析し、提案します。</p>
-        </div>
+            <p>あなたの全てを教えてください。AIが分析し、最高のキャリアパートナーを提案します。</p>
+        </header>
 
         <form id="profile-form">
             <!-- 基本情報 -->
-            <div class="form-section">
-                <h2>Step 1: あなたについて</h2>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="q2-grade">学年</label>
-                        <select id="q2-grade" required><option value="">選択してください</option><option>大学3年</option><option>大学4年</option><option>大学院生</option><option>高専4年</option></select>
-                    </div>
-                    <div class="form-group">
-                        <label for="q4-school">所属学校</label>
-                        <input type="text" id="q4-school" placeholder="例: 福井大学" required>
-                    </div>
+            <section class="form-section">
+                <h2>基本情報</h2>
+                <div class="form-grid-3">
+                    <div class="form-group"><label for="q1-gender">Q1. 性別</label><select id="q1-gender" required><option value="">選択</option><option>男性</option><option>女性</option><option>その他</option></select></div>
+                    <div class="form-group"><label for="q2-grade">Q2. 学年</label><select id="q2-grade" required><option value="">選択</option><option>大学3年</option><option>大学4年</option><option>大学院生</option><option>高専4年</option></select></div>
+                    <div class="form-group"><label for="q3-hometown">Q3. 出身地</label><input type="text" id="q3-hometown" placeholder="例: 福井県" required></div>
                 </div>
-            </div>
+                <div class="form-grid-2">
+                    <div class="form-group"><label for="q4-school">Q4. 所属学校</label><input type="text" id="q4-school" placeholder="例: 福井大学" required></div>
+                    <div class="form-group"><label for="q5-faculty">Q5. 所属学部・学科</label><input type="text" id="q5-faculty" placeholder="例: 工学部" required></div>
+                </div>
+            </section>
 
             <!-- 希望条件 -->
-            <div class="form-section">
-                <h2>Step 2: あなたの希望</h2>
-                <div class="form-group">
-                    <label>興味のある業界 (複数選択可)</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="q6-industry" value="メーカー（製造業）"> メーカー</label>
-                        <label><input type="checkbox" name="q6-industry" value="IT・インターネット"> IT</label>
-                        <label><input type="checkbox" name="q6-industry" value="エネルギー・インフラ"> インフラ</label>
-                        <label><input type="checkbox" name="q6-industry" value="教育・公務"> 教育・公務</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>就職希望エリア (複数選択可)</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="q8-area" value="福井県内"> 福井県内</label>
-                        <label><input type="checkbox" name="q8-area" value="首都圏"> 首都圏</label>
-                        <label><input type="checkbox" name="q8-area" value="関西圏"> 関西圏</label>
-                    </div>
-                </div>
-            </div>
+            <section class="form-section">
+                <h2>希望条件</h2>
+                <div class="form-group"><label>Q6. 興味のある業界 (複数可)</label><div class="checkbox-group"><label><input type="checkbox" name="q6-industry" value="メーカー"> メーカー</label><label><input type="checkbox" name="q6-industry" value="IT"> IT</label><label><input type="checkbox" name="q6-industry" value="インフラ"> インフラ</label><label><input type="checkbox" name="q6-industry" value="教育・公務"> 教育・公務</label></div></div>
+                <div class="form-group"><label>Q7. 興味のある職種 (複数可)</label><div class="checkbox-group"><label><input type="checkbox" name="q7-job" value="製造・技術職"> 製造・技術職</label><label><input type="checkbox" name="q7-job" value="IT・クリエイティブ職"> IT職</label><label><input type="checkbox" name="q7-job" value="営業・販売職"> 営業職</label><label><input type="checkbox" name="q7-job" value="研究開発"> 研究開発</label></div></div>
+                <div class="form-group"><label>Q8. 就職希望エリア (複数可)</label><div class="checkbox-group"><label><input type="checkbox" name="q8-area" value="福井県内"> 福井県内</label><label><input type="checkbox" name="q8-area" value="首都圏"> 首都圏</label><label><input type="checkbox" name="q8-area" value="関西圏"> 関西圏</label></div></div>
+            </section>
 
             <!-- 価値観 -->
-            <div class="form-section">
-                <h2>Step 3: あなたの価値観</h2>
-                <div class="form-group">
-                    <label for="q9-priority1">企業を選ぶ際に重視するポイント (最大3つ)</label>
-                    <select id="q9-priority1"><option value="">1位</option><option>成長できる環境</option><option>職場の雰囲気・人間関係</option><option>ワークライフバランス</option><option>福利厚生</option></select>
-                    <select id="q9-priority2"><option value="">2位</option><option>成長できる環境</option><option>職場の雰囲気・人間関係</option><option>ワークライフバランス</option><option>福利厚生</option></select>
-                    <select id="q9-priority3"><option value="">3位</option><option>成長できる環境</option><option>職場の雰囲気・人間関係</option><option>ワークライフバランス</option><option>福利厚生</option></select>
-                </div>
-                <div class="form-group">
-                    <label for="q15-motivation">あなたが「働きがい」を感じるのはどんなときですか？ (自由記述)</label>
-                    <textarea id="q15-motivation" rows="4" placeholder="例: 難しい課題に挑戦して乗り越えたとき。チームで協力して大きな目標を達成したとき。" required></textarea>
-                </div>
-            </div>
+            <section class="form-section">
+                <h2>価値観・考え方</h2>
+                <div class="form-group"><label>Q9. 企業を選ぶ際に重視するポイント (上位3つ)</label><div class="form-grid-3"><select id="q9-1"><option value="">1位</option><option>成長できる環境</option><option>職場の雰囲気</option><option>ワークライフバランス</option><option>福利厚生</option><option>給与</option></select><select id="q9-2"><option value="">2位</option><option>成長できる環境</option><option>職場の雰囲気</option><option>ワークライフバランス</option><option>福利厚生</option><option>給与</option></select><select id="q9-3"><option value="">3位</option><option>成長できる環境</option><option>職場の雰囲気</option><option>ワークライフバランス</option><option>福利厚生</option><option>給与</option></select></div></div>
+                <div class="form-group"><label>Q11. これが不十分だと嫌なポイント (上位3つ)</label><div class="form-grid-3"><select id="q11-1"><option value="">1位</option><option>成長できる環境</option><option>職場の雰囲気</option><option>ワークライフバランス</option><option>福利厚生</option><option>給与</option></select><select id="q11-2"><option value="">2位</option><option>成長できる環境</option><option>職場の雰囲気</option><option>ワークライフバランス</option><option>福利厚生</option><option>給与</option></select><select id="q11-3"><option value="">3位</option><option>成長できる環境</option><option>職場の雰囲気</option><option>ワークライフバランス</option><option>福利厚生</option><option>給与</option></select></div></div>
+                <div class="form-group"><label for="q12-work-style">Q12. 生き生き働いている状態とは？</label><textarea id="q12-work-style" rows="3" placeholder="例: 挑戦と成長を実感でき、チームで協力し合える状態"></textarea></div>
+                <div class="form-group"><label for="q15-motivation">Q15. あなたが「働きがい」を感じるのはどんなときですか？</label><textarea id="q15-motivation" rows="3" placeholder="例: 自分のアイデアが形になり、誰かの役に立ったとき" required></textarea></div>
+            </section>
 
+            <!-- 就職活動について -->
+            <section class="form-section">
+                <h2>就職活動について</h2>
+                <div class="form-group"><label for="q14-contents">Q14. 企業のHPやSNSで知りたい内容は？</label><textarea id="q14-contents" rows="3" placeholder="例: 実際の社員の一日のスケジュールや、キャリアパスの実例"></textarea></div>
+                <div class="form-group"><label for="q23-request">Q23. 説明会や選考で「もっとこうしてほしい」点は？</label><textarea id="q23-request" rows="3" placeholder="例: 良い点だけでなく、大変な点や課題も正直に話してほしい"></textarea></div>
+            </section>
+            
             <button type="submit" class="submit-button">AIによる分析を開始する</button>
         </form>
     </div>
