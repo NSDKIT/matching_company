@@ -1,0 +1,49 @@
+/* 基本スタイル */
+:root { --primary-color: #4a90e2; --secondary-color: #28a745; --light-bg: #f8f9fa; --card-bg: #ffffff; --text-color: #333; }
+body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--light-bg); margin: 0; padding: 20px; }
+.container { max-width: 800px; margin: 20px auto; background: var(--card-bg); padding: 20px 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+
+/* ヘッダー */
+.header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+.header h1 { color: #2c3e50; }
+
+/* フォーム */
+.form-section { margin-bottom: 30px; }
+.form-section h2 { font-size: 20px; color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; margin-bottom: 20px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+.form-group input, .form-group select, .form-group textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; width: 100%; box-sizing: border-box; }
+.checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 5px; }
+.checkbox-group label { font-weight: normal; }
+.submit-button { display: block; width: 100%; padding: 15px; font-size: 18px; font-weight: bold; color: #fff; background-color: var(--secondary-color); border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+.submit-button:hover { background-color: #218838; }
+
+/* 分析中ページ */
+.processing-container { text-align: center; padding: 50px; }
+.loader { border: 8px solid #f3f3f3; border-top: 8px solid var(--primary-color); border-radius: 50%; width: 60px; height: 60px; animation: spin 1.5s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.steps { margin-top: 30px; text-align: left; }
+.step { margin-bottom: 15px; opacity: 0.5; transition: opacity 0.5s; display: flex; align-items: center; }
+.step-icon { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #ccc; margin-right: 15px; transition: all 0.5s; }
+.step.completed { opacity: 1; }
+.step.completed .step-icon { background-color: var(--secondary-color); border-color: var(--secondary-color); }
+.step.completed p { font-weight: bold; }
+
+/* 結果ページ */
+.profile-summary { background: #f1f8ff; padding: 15px 20px; border-radius: 8px; margin-bottom: 40px; }
+.profile-summary h2 { margin-top: 0; font-size: 18px; }
+.profile-summary ul { display: flex; flex-wrap: wrap; gap: 10px; padding-left: 0; list-style-type: none; margin: 0; }
+.profile-summary li { background-color: #e0efff; color: #333; padding: 5px 12px; border-radius: 15px; font-size: 14px; font-weight: bold; }
+
+.company-card { border: 1px solid #ddd; border-radius: 10px; margin-bottom: 30px; padding: 25px; transition: box-shadow 0.3s; }
+.company-card h3 { color: var(--primary-color); }
+.match-points { background-color: #fffbe6; border-left: 5px solid #ffc107; padding: 15px 20px; margin: 20px 0; border-radius: 0 5px 5px 0; }
+.match-points p { margin: 0; }
+.section-title { font-weight: bold; border-bottom: 2px solid #eee; padding-bottom: 8px; margin: 25px 0 15px; }
+.details-grid { display: grid; gap: 15px; }
+.detail-item strong { display: block; color: #555; font-size: 14px; }
+.action-links { margin-top: 25px; }
+.youtube-link { text-decoration: none; padding: 10px 18px; border-radius: 5px; font-weight: bold; background-color: #ff0000; color: white; transition: background-color 0.3s; }
+.youtube-link:hover { background-color: #cc0000; }
+.error-message { text-align: center; padding: 20px; background-color: #fff3f3; border: 1px solid #ffcccc; border-radius: 5px; }
